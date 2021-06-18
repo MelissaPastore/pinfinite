@@ -1,12 +1,14 @@
 import React from "react";
 import Pin from "../Pin";
+import { PinWrapper, PinContainer } from "./PinBoardElements";
 
 const PinBoard = () => {
   return (
-    <div>
-      I'm the pin board
-      <Pin />
-    </div>
+    <PinWrapper>
+      <PinContainer>
+        <Pin />
+      </PinContainer>
+    </PinWrapper>
   );
 };
 
