@@ -52,6 +52,7 @@ export const HomeButton = styled(Buttons)`
 
 export const SearchContainer = styled.div`
   flex: 1;
+  margin-right: 15px;
 `;
 
 export const SearchBarContainer = styled.div`

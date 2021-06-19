@@ -1,15 +1,12 @@
 import React from "react";
+import { PinWrapper, PinContainer } from "./PinElements";
 
-const Pin = () => {
-  return (
-    <div>
-      I'm the pin
-      <img
-        src="https://st.hzcdn.com/simgs/d03120af0d13ea52_4-6158/home-design.jpg"
-        alt="A beautiful beach scene with many umbrellas"
-      />
-    </div>
-  );
-};
+const Pin = ({ pin }) => (
+  <PinWrapper>
+    <PinContainer>
+      <img src={pin.images.orig.url} />
+    </PinContainer>
+  </PinWrapper>
+);
 
 export default Pin;

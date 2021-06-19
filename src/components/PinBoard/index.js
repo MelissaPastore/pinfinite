@@ -2,11 +2,14 @@ import React from "react";
 import Pin from "../Pin";
 import { PinWrapper, PinContainer } from "./PinBoardElements";
 
-const PinBoard = () => {
+const PinBoard = ({ pins }) => {
+  console.log("THE PINS", pins);
   return (
     <PinWrapper>
       <PinContainer>
-        <Pin />
+        {pins.map((pin) => {
+          return <Pin key={pin.id} pin={pin} />;
+        })}
       </PinContainer>
     </PinWrapper>
   );
