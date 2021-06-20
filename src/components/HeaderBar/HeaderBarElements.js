@@ -7,6 +7,11 @@ export const Wrapper = styled.div`
   padding: 16px 4px 4px 16px;
   color: black;
   background-color: white;
+
+  @media (min-width: 0px) and (max-width: 505px) {
+    flex-wrap: wrap;
+    justify-conter: center;
+  }
 `;
 
 export const LogoWrapper = styled.div`

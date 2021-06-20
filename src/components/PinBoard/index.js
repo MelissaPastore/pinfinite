@@ -3,7 +3,6 @@ import Pin from "../Pin";
 import { PinWrapper, PinContainer } from "./PinBoardElements";
 
 const PinBoard = ({ pins }) => {
-  console.log("THE PINS", pins);
   return (
     <PinWrapper>
       <PinContainer>
