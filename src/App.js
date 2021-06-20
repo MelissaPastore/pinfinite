@@ -13,8 +13,8 @@ function App() {
         Accept: "application/json",
       },
     });
-    const pins = await response.json();
-    setPins(pins);
+    const newPins = await response.json();
+    setPins([newPins]);
   };
 
   useEffect(() => {
@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <HeaderBar />
-        <PinBoard pins={pins} />
+        <PinBoard pins={pins} getPins={getPins} />
       </header>
     </div>
   );
