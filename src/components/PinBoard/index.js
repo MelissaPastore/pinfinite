@@ -4,18 +4,20 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { PinWrapper, PinContainer } from "./PinBoardElements";
 
 const PinBoard = ({ pins, getPins }) => {
+  const hasMore = pins.length <= 5000 ? true : false;
+
   return (
     <PinWrapper>
       <InfiniteScroll
         dataLength={pins.length}
         next={getPins}
-        hasMore={true}
+        hasMore={hasMore}
         loader={<h2>Loading more pins...</h2>}
-        endMessage={<p>No more pins!</p>}
+        endMessage={<p>You've seen all the pins!</p>}
       >
         <PinContainer>
-          {pins.map((pin) => {
-            return <Pin key={pin.id} pin={pin} />;
+          {pins.map((pin, i) => {
+            return <Pin key={i} pin={pin} />;
           })}
         </PinContainer>
       </InfiniteScroll>

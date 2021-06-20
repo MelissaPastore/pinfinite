@@ -4,7 +4,6 @@ export const PinWrapper = styled.div`
   background-color: white;
   display: flex;
   justify-content: center;
-  height: 500px;
   width: 100%;
   height: 100%;
   margin-top: 15px;
@@ -15,6 +14,8 @@ export const PinContainer = styled.div`
   column-gap: 10px;
   margin: 0 auto;
   height: 100%;
+  align-items: center;
+  justify-content: center;
 
   @media (min-width 0px) and (max-width: 755px) {
     max-width: 504px;

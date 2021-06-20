@@ -7,6 +7,7 @@ export const PinWrapper = styled.div`
 
 export const PinContainer = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   box-sizing: border-box;
   width: 230px;
