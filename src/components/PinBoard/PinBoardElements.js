@@ -14,7 +14,7 @@ export const PinContainer = styled.div`
   column-gap: 10px;
   margin: 0 auto;
   height: 100%;
-  // column-count: 5;
+  column-count: 6;
 
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     column-count: 2;
