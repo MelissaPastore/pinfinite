@@ -18,6 +18,9 @@ export const PinContainer = styled.div`
     cursor: zoom-in;
     border-radius: 16px;
     object-fit: cover;
+    padding-bottom: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
   }
 `;
 

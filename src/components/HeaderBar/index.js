@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import IconButton from "@material-ui/core/IconButton";
 import {
   Wrapper,
@@ -17,6 +17,8 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import FaceIcon from "@material-ui/icons/Face";
 
 const HeaderBar = () => {
+  const [input, setInput] = useState("");
+
   return (
     <Wrapper>
       <LogoWrapper>
@@ -36,8 +38,17 @@ const HeaderBar = () => {
             <SearchIcon />
           </IconButton>
           <form>
-            <input type="text" />
-            <button type="submit"></button>
+            <input
+              type="text"
+              onChange={(event) => setInput(event.target.value)}
+            />
+            <button
+              type="submit"
+              onClick={(event) => {
+                event.preventDefault();
+                console.log("input", input);
+              }}
+            ></button>
           </form>
         </SearchBarContainer>
       </SearchContainer>

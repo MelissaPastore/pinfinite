@@ -14,8 +14,6 @@ export const PinContainer = styled.div`
   column-gap: 10px;
   margin: 0 auto;
   height: 100%;
-  align-items: center;
-  justify-content: center;
 
   @media (min-width 0px) and (max-width: 755px) {
     max-width: 504px;
