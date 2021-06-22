@@ -7,7 +7,6 @@ function App() {
   const [pins, setPins] = useState([]);
 
   const getPins = async () => {
-    if (pins.length >= 5000) return;
     const response = await fetch("nyc_ttp_pins.json", {
       headers: {
         "Content-Type": "application.json",
@@ -18,15 +17,20 @@ function App() {
     setPins([...pins, ...newPins]);
   };
 
+  const getMorePins = () => {
+    if (pins.length > 750) return;
+    getPins();
+  };
+
   useEffect(() => {
     getPins();
-  }, [pins]);
+  }, []);
 
   return (
     <div className="App">
       <header className="App-header">
         <HeaderBar />
-        <PinBoard pins={pins} getMorePins={getPins} />
+        <PinBoard pins={pins} getMorePins={getMorePins} />
       </header>
     </div>
   );

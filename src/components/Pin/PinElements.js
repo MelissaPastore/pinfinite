@@ -20,3 +20,23 @@ export const PinContainer = styled.div`
     object-fit: cover;
   }
 `;
+
+export const PinDetailsContainer = styled.div`
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  height: 100px;
+  min-height: 0;
+  min-width: 0;
+  align-self: flex-start;
+  height: 100%;
+`;
+
+export const PinDescription = styled.p`
+  font-size: 12px;
+  font-weight: 700;
+`;
+
+export const Pinner = styled.p`
+  font-size: 12px;
+  font-weight: 600;
+`;

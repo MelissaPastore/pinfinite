@@ -6,7 +6,7 @@ export const PinWrapper = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
-  margin-top: 15px;
+  margin: 15px;
 `;
 
 export const PinContainer = styled.div`
